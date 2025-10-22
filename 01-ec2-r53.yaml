@@ -8,6 +8,8 @@
     domain_name: "sivadaws86s.fun"
     instances:
     - mongodb
+    - mysql
+    - redis
 
   tasks:
   - name: create ec2 instance
