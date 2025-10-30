@@ -6,10 +6,10 @@
     sg_id: "sg-091cb43b543378edc"
     zone_id: "Z0986549106U082ZUABIR"
     domain_name: "sivadaws86s.fun"
-    instances:
-    - mongodb
-    - mysql
-    - redis
+    # instances:
+    # - mongodb
+    # - mysql
+    # - redis
 
   tasks:
   - name: create ec2 instance
