@@ -15,12 +15,11 @@
 
   - name: create roboshop system user
     ansible.builtin.user:
-      name: rorboshop
-      comment: rorboshop system user
+      name: roboshop
+      comment: RoboShop System user
       system: true
       shell: /sbin/nologin
       home: /app
-
   # Safe to remove directory, because 2nd time if we run it will download freshly. no error if does not exist
   - name: remove app directory
     ansible.builtin.file:
@@ -97,3 +96,4 @@
       enabled: true
       state: started
       daemon_reload: true
+  
