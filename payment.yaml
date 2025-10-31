@@ -1,4 +1,4 @@
-- name: setup payment server
+- name: configure payment server
   hosts: payment
   become: yes
   tasks:
@@ -18,7 +18,6 @@
       system: true
       shell: /sbin/nologin
       home: /app
-
   # Safe to remove directory, because 2nd time if we run it will download freshly. no error if does not exist
   - name: remove app directory
     ansible.builtin.file:
@@ -46,9 +45,9 @@
       dest: /app
       remote_src: yes
 
-  - name: Install specified python requirements
+  - name: install dependencies
     ansible.builtin.pip:
-      requirements: /my_app/requirements.txt
+      requirements: requirements.txt
       executable: pip3.9
     args:
       chdir: /app
